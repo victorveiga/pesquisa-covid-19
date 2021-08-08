@@ -51,7 +51,7 @@ export default class Core extends Component {
         return <>
             <div className="lead" style={{marginLeft: "10px", fontSize: "0.8rem"}}>CENTRO UNIVERSITÁRIO SERRA DOS ÓRGÃOS</div>
             <div style={{padding: 10}}>
-                <img id="logo_" src="https://www.unifeso.edu.br/images/logo/UNIFESO.png" width="220px" />
+                <img id="logo_" src="https://www.unifeso.edu.br/images/logo/UNIFESO.png" width="220px" alt="Logo da UNIFESO" />
             </div>
             <div className="d-flex justify-content-center mt-3 p-4" >
                 <Form noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}> 

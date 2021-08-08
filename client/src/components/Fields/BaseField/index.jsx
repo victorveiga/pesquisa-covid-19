@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 
 export default class BaseField extends Component {
     getValue(fieldname){

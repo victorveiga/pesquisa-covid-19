@@ -1,9 +1,17 @@
 import Local from "./components/questions/local";
 import Pessoal from "./components/questions/pessoal";
+import Pessoal_2 from "./components/questions/pessoal_2";
+import EstudoTrabalho from "./components/questions/EstudoTrabalho";
+import Pessoal_3 from "./components/questions/pessoal_3";
+import Term from "./components/term";
 
 const QUESTIONS_LIST = [
+    Term,
     Local,
-    Pessoal
+    Pessoal,
+    Pessoal_2,
+    EstudoTrabalho,
+    Pessoal_3,
 ];
 
 const UNIDADES_FEDERATIVAS = [
