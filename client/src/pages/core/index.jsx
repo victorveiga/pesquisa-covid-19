@@ -37,47 +37,29 @@ export default class Core extends Component {
     handleSubmit(e){
         e.preventDefault();
         const form = e.currentTarget;
+        let result = false;
         if (form.checkValidity() === false) {
             e.stopPropagation();
-        } else {
+        } else {            
             this.nextQuestion();
+            result = true;
         }
 
         this.setState({validated: true});
-        
+        return result;
     }
 
     render(){
         return <>
-            <div className="lead" style={{marginLeft: "10px", fontSize: "0.8rem"}}>CENTRO UNIVERSITÁRIO SERRA DOS ÓRGÃOS</div>
-            <div style={{padding: 10}}>
-                <img id="logo_" src="https://www.unifeso.edu.br/images/logo/UNIFESO.png" width="220px" alt="Logo da UNIFESO" />
-            </div>
-            <div className="d-flex justify-content-center mt-3 p-4" >
+            <div className="d-flex justify-content-center p-4" >
                 <Form noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}> 
-                    <div className="d-flex justify-content-end m-4">
+                    {this.state.question_idx !== 0 &&  <div className="d-flex justify-content-end mb-2">
                         <Button variant="outline-danger" className="mr-2" onClick={e => this.previousQuestion()}>Voltar</Button>
                         <Button variant="outline-success" type="submit">Continuar</Button>
-                    </div>
+                    </div>}
                     {<this.state.content
                         form={this}
                     />}
-                    {/*<div>
-                        <Form.Label>Você precisou trocar o perfil de usuário da internet, durante o confinamento?</Form.Label>
-                        <div>
-                            <Form.Check inline name="q1" type="radio" label="Sim" />
-                            <Form.Check inline name="q1" type="radio" label="Não" />
-                        </div>
-                    </div>
-                    <div>
-                        <Form.Label>Caso tenha respondido “Sim” na pergunta anterior, indique o motivo? (você pode responder mais de uma):</Form.Label>
-                    </div>
-                    <Form.Check type="checkbox" label="1 - Devido ao número de pessoas precisando utilizar a internet em casa. " />
-                    <Form.Check type="checkbox" label="2 - Devido a necessidade de lazer (assistir filmes, games, Tv etc.)" />
-                    <Form.Check type="checkbox" label="3 - Devido ao serviço de home office." />
-                    <Form.Check type="checkbox" label="4 - Devido ao serviço de home office e utilização do Ambiente Virtual de Aprendizagem (AVA)." />
-                    <Form.Check type="checkbox" label="5 - Devido a utilização do Ambiente Virtual de Aprendizagem (AVA)." />
-                    <Form.Check type="checkbox" label="6 - Outra" /> */}
                 </Form>
             </div>         
         </>

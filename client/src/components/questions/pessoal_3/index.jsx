@@ -21,13 +21,13 @@ export default class Pessoal_3 extends Component {
                         {value: "7", description: "Outra"},
                     ]}
                 />
-                {this.props.form.state.instrucao && this.props.form.state.funcao_unifeso === "7" && <CharField 
+                {this.props.form.state.funcao_unifeso && this.props.form.state.funcao_unifeso === "7" && <CharField 
                     controlId="edtFuncaoEspecificar"
                     form={this.props.form}
                     label="Especificar a função"
                     placeholder="Especifique sua função na comunidade UNIFESO"
                     field="funcao_unifeso_espec"
-                    required={this.props.form.state.instrucao && this.props.form.state.funcao_unifeso === "7" ? true : false}
+                    required={this.props.form.state.funcao_unifeso && this.props.form.state.funcao_unifeso === "7" ? true : false}
                     feedback_invalid="Por favor, especifique sua função na comunidade"
                 />}
                 <SelectField 

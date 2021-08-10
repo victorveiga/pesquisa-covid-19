@@ -4,9 +4,11 @@ import Pessoal_2 from "./components/questions/pessoal_2";
 import EstudoTrabalho from "./components/questions/EstudoTrabalho";
 import Pessoal_3 from "./components/questions/pessoal_3";
 import Term from "./components/term";
+import TipoConexao from './components/questions/TipoConexao';
 
 const QUESTIONS_LIST = [
     Term,
+    TipoConexao,
     Local,
     Pessoal,
     Pessoal_2,

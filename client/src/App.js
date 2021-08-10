@@ -1,9 +1,8 @@
 import Core from './pages/core';
 
-
 function App() {
   return <>
-    <Core/>
+    <Core/>    
   </>
 }
 
