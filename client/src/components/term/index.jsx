@@ -15,7 +15,7 @@ export default class Term extends Component {
 
     render(){
         return <>            
-            <button type="button" className="custom-button" onClick={e => this.setState({show: true})}>Vamos começar</button>                        
+            <button style={{marginTop: '60%'}} type="button" className="custom-button" onClick={e => this.setState({show: true})}>Vamos começar</button>                        
             <Modal
                 show={this.state.show}
                 onHide={_ => this.setState({show: false})}
@@ -28,7 +28,7 @@ export default class Term extends Component {
                         TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO – TCLE
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body style={{height: '400px', overflowY: 'scroll'}}>
+                <Modal.Body className="custom-body" style={{height: '400px', overflowY: 'scroll'}}>
                     <div align="justify">
                         Somos pesquisadores, especialistas nas áreas de conhecimento do Unifeso e integrantes
                         da Diretoria de Educação a Distância (DEaD - Unifeso), juntamente com estudantes bolsistas 
@@ -83,43 +83,43 @@ export default class Term extends Component {
                         <div align="justify">
                             Se você tiver alguma dúvida, você pode contatar a coordenadora da pesquisa: 
                         </div>
-                        <div class="row border">
-                            <div class="col-6">
+                        <div className="row border">
+                            <div className="col-6">
                                 <strong>Nome do pesquisador(a):</strong><br/>
                             </div>
-                            <div class="col-6">
+                            <div className="col-6">
                                 Cátia Araujo Farias <br/>
                             </div>
                         </div>
-                        <div class="row border">
-                            <div class="col-6">
+                        <div className="row border">
+                            <div className="col-6">
                                 <strong>Cargo/Função:</strong><br/> 
                             </div>
-                            <div class="col-6">
+                            <div className="col-6">
                                 Assessora Pedagógica da DEaD <br/> 
                             </div>
                         </div>
-                        <div class="row border">
-                            <div class="col-6">
+                        <div className="row border">
+                            <div className="col-6">
                                 <strong>Instituição:</strong><br/> 
                             </div>
-                            <div class="col-6">
+                            <div className="col-6">
                                 Centro Universitário Serra dos Órgãos - Unifeso <br/> 
                             </div>
                         </div>
-                        <div class="row border">
-                            <div class="col-6"> 
+                        <div className="row border">
+                            <div className="col-6"> 
                                 <strong>e-mail:</strong><br/> 
                             </div>
-                            <div class="col-6">
+                            <div className="col-6">
                                 catiafarias@unifeso.edu.br <br/> 
                             </div>
                         </div>
-                        <div class="row border">
-                            <div class="col-6">
+                        <div className="row border">
+                            <div className="col-6">
                                 <strong>Telefone:</strong><br/> 
                             </div>
-                            <div class="col-6">
+                            <div className="col-6">
                                 (21) 97918-5857 <br/> 
                             </div>
                         </div>
@@ -142,6 +142,9 @@ export default class Term extends Component {
                     <Button variant="success" onClick={ e => {
                         if (this.state.aceitar_termo === false){
                             this.setState({isInvalid: true});  
+                            let body = null;
+                            if (document.getElementsByClassName('custom-body').length > 0) body = document.getElementsByClassName('custom-body')[0];                            
+                            body.scrollTop = body.scrollHeight;
                             return ;
                         }
                         this.props.form.nextQuestion(e);
