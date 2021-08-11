@@ -28,7 +28,7 @@ export default class TipoConexao extends Component {
                 feedback_invalid="Por favor, especifique a conexão da sua conexão internet"
             />}
             <Form.Text className="text-muted">
-                Preencha as informações pessoais acima e clique no botão Continuar
+                Informe uma opção acima
             </Form.Text>
         </div>
     }

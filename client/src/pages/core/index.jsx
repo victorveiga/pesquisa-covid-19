@@ -57,9 +57,11 @@ export default class Core extends Component {
                         <Button variant="outline-danger" className="mr-2" onClick={e => this.previousQuestion()}>Voltar</Button>
                         <Button variant="outline-success" type="submit">Continuar</Button>
                     </div>}
+                    <div style={{maxWidth: '500px'}}>
                     {<this.state.content
                         form={this}
                     />}
+                    </div>
                 </Form>
             </div>         
         </>

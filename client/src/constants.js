@@ -5,15 +5,25 @@ import EstudoTrabalho from "./components/questions/EstudoTrabalho";
 import Pessoal_3 from "./components/questions/pessoal_3";
 import Term from "./components/term";
 import TipoConexao from './components/questions/TipoConexao';
+import TipoRede from "./components/questions/TipoRede";
+import DispositivoUsado from "./components/questions/DispositivoUsado";
+import TipoUsuario from "./components/questions/TipoUsuario";
+import TrocouPerfilUsuario from "./components/questions/TrocouPerfilUsuario";
+import MotivoTrocaPerfilUsuario from "./components/questions/MotivoTrocaPerfilUsuario";
 
 const QUESTIONS_LIST = [
-    Term,
+    Term,    
     TipoConexao,
+    TipoRede,
+    DispositivoUsado,
+    TipoUsuario,
+    TrocouPerfilUsuario,
+    MotivoTrocaPerfilUsuario,
     Local,
     Pessoal,
     Pessoal_2,
     EstudoTrabalho,
-    Pessoal_3,
+    Pessoal_3,    
 ];
 
 const UNIDADES_FEDERATIVAS = [
