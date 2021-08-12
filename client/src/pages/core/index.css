@@ -2,3 +2,8 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+.selection-button:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}

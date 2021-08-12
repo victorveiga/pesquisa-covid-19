@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {Form, Button} from 'react-bootstrap';
+import {Form, Button, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {QUESTIONS_LIST} from '../../constants';
 import Term from '../../components/term';
+import {BiSkipNextCircle, BiSkipPreviousCircle} from 'react-icons/bi';
 import './index.css';
 
 export default class Core extends Component {
@@ -61,12 +62,16 @@ export default class Core extends Component {
                         {this.state.aceitou_termo === false && <Term form={this} />}
                         {this.state.aceitou_termo === true && 
                         <div>
-                        <div className="d-flex justify-content-end mb-2">
-                            <Button variant="outline-danger" className="mr-2" onClick={e => this.previousQuestion()}>Voltar</Button>
-                            <Button variant="outline-success" type="submit">Continuar</Button>
-                        </div>
-                        
-                        <this.state.content form={this} />         
+                            <div className="d-flex justify-content-end mb-2">                                                            
+                                <OverlayTrigger placement="bottom" overlay={ props => <Tooltip {...props}>Questão Anterior</Tooltip>}>                    
+                                    <Button variant="outline-dark" className="mr-2 selection-button" onClick={e => this.previousQuestion()}><BiSkipPreviousCircle size="2em"/></Button>                                
+                                </OverlayTrigger>
+                                <OverlayTrigger placement="bottom" overlay={ props => <Tooltip {...props}>Próxima Questão</Tooltip>}>                    
+                                    <Button variant="outline-dark" className="selection-button" type="submit"><BiSkipNextCircle size="2em"/></Button>
+                                </OverlayTrigger>
+                            </div>
+                            
+                            <this.state.content form={this} />         
                         </div>}
                     </div>
                 </Form>
