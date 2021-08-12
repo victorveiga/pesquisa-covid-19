@@ -3,22 +3,34 @@ import Pessoal from "./components/questions/pessoal";
 import Pessoal_2 from "./components/questions/pessoal_2";
 import EstudoTrabalho from "./components/questions/EstudoTrabalho";
 import Pessoal_3 from "./components/questions/pessoal_3";
-import Term from "./components/term";
 import TipoConexao from './components/questions/TipoConexao';
 import TipoRede from "./components/questions/TipoRede";
 import DispositivoUsado from "./components/questions/DispositivoUsado";
 import TipoUsuario from "./components/questions/TipoUsuario";
 import TrocouPerfilUsuario from "./components/questions/TrocouPerfilUsuario";
 import MotivoTrocaPerfilUsuario from "./components/questions/MotivoTrocaPerfilUsuario";
+import EquipamentoHomeOffice from "./components/questions/EquipamentoHomeOffice";
+import ObstaculoEquipamento from "./components/questions/ObstaculoEquipamento";
+import AppsUtilizados from "./components/questions/AppsUtilizados";
+import SOUtilizado from "./components/questions/SOUtilizado";
+import UtilizouVirtualidade from "./components/questions/UtilizouVirtualidade";
+import VirtualAtividade from "./components/questions/VirtualAtividade";
+import VirtualAtividadeMotivo from "./components/questions/VirtualAtividadeMotivo";
 
 const QUESTIONS_LIST = [
-    Term,    
     TipoConexao,
     TipoRede,
     DispositivoUsado,
     TipoUsuario,
     TrocouPerfilUsuario,
     MotivoTrocaPerfilUsuario,
+    EquipamentoHomeOffice,
+    ObstaculoEquipamento,
+    AppsUtilizados,
+    SOUtilizado,
+    UtilizouVirtualidade,
+    VirtualAtividade,
+    VirtualAtividadeMotivo,
     Local,
     Pessoal,
     Pessoal_2,

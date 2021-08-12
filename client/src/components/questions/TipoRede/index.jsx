@@ -16,7 +16,7 @@ export default class TipoRede extends Component {
                 field="tipo_rede"
             />
             <Form.Text className="text-muted">
-                Informe uma opção acima
+                Escolha uma das opções acima
             </Form.Text>
         </div>
     }

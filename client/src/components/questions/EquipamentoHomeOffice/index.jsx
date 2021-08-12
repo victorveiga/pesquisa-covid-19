@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 import { Form } from 'react-bootstrap';
 import RadioButton from '../../Fields/RadioButton';
 
-export default class TrocouPerfilUsuario extends Component {
+export default class EquipamentoHomeOffice extends Component {
     render(){
         return <div>                
             <RadioButton
                 form={this.props.form}
-                label="Você precisou trocar o perfil de usuário da internet, durante o confinamento?"
+                label="Você possui os equipamentos necessários para trabalhar em home office?"
                 options={[
                     {value: "S", description: "Sim"},
                     {value: "N", description: "Não"}
                 ]}
-                field="trocou_perfil_usuario"
+                field="equipamento_home_office"
             />
             <Form.Text className="text-muted">
                 Escolha uma das opções acima

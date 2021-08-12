@@ -148,7 +148,8 @@ export default class Term extends Component {
                             return ;
                         }
                         this.props.form.nextQuestion(e);
-                        this.setState({show: false});                        
+                        this.setState({show: false});      
+                        this.props.form.setState({aceitou_termo: true});            
                     }}>Continuar</Button>                                       
                 </Modal.Footer>
             </Modal>            

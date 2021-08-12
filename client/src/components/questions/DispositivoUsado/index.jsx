@@ -26,7 +26,7 @@ export default class DispositivoUsado extends Component {
                 feedback_invalid="Por favor, especifique o dispositivo utilizado para navegar na internet"
             />}
             <Form.Text className="text-muted">
-                Informe uma opção acima
+                Escolha uma das opções acima
             </Form.Text>
         </div>
     }

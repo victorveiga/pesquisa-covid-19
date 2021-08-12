@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Form, Button} from 'react-bootstrap';
 import {QUESTIONS_LIST} from '../../constants';
+import Term from '../../components/term';
 import './index.css';
 
 export default class Core extends Component {
@@ -11,7 +12,8 @@ export default class Core extends Component {
         this.state = {
             validated: false,
             content: QUESTIONS_LIST[0],
-            question_idx : 0
+            question_idx: -1,
+            aceitou_termo: false
         }
     }
 
@@ -52,15 +54,18 @@ export default class Core extends Component {
     render(){
         return <>
             <div className="d-flex justify-content-center p-4" >
-                <Form noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}> 
-                    {this.state.question_idx !== 0 &&  <div className="d-flex justify-content-end mb-2">
-                        <Button variant="outline-danger" className="mr-2" onClick={e => this.previousQuestion()}>Voltar</Button>
-                        <Button variant="outline-success" type="submit">Continuar</Button>
-                    </div>}
+                <Form noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}>                   
                     <div style={{maxWidth: '500px'}}>
-                    {<this.state.content
-                        form={this}
-                    />}
+                        {this.state.aceitou_termo === false && <Term form={this} />}
+                        {this.state.aceitou_termo === true && 
+                        <div>
+                        <div className="d-flex justify-content-end mb-2">
+                            <Button variant="outline-danger" className="mr-2" onClick={e => this.previousQuestion()}>Voltar</Button>
+                            <Button variant="outline-success" type="submit">Continuar</Button>
+                        </div>
+                        
+                        <this.state.content form={this} />
+                        </div>}
                     </div>
                 </Form>
             </div>         

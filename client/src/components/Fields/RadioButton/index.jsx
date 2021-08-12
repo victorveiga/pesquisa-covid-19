@@ -13,6 +13,7 @@ export default class RadioButton extends BaseField {
                     value={item.value}
                     checked={item.value === this.getValue(this.props.field)}
                     onChange={e => this.handleChange(e, this.props.field)}
+                    //onClick={ e => setTimeout(_ => this.props.form.nextQuestion(), 1000) }
                 />
                 <label htmlFor={`radio${index}`}>{item.description}</label>
             </div>)}

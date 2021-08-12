@@ -16,7 +16,7 @@ export default class TipoUsuario extends Component {
                 field="tipo_usuario"
             />
             <Form.Text className="text-muted">
-                Informe uma opção acima
+                Escolha uma das opções acima
             </Form.Text>
         </div>
     }
