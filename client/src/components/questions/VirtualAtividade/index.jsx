@@ -24,7 +24,7 @@ export default class VirtualAtividade extends Component {
                 controlId="edtVirtualAtividadeEspec"
                 form={this.props.form}
                 label="Especificar atividades desenvolvidas por você"
-                placeholder="Especifique as atividades"
+                placeholder="Escreva aqui"
                 field="virtual_atividade_espec"
                 required={this.props.form.state.virtual_atividade && this.props.form.state.virtual_atividade === "6" ? true : false}
                 feedback_invalid="Por favor, especifique as atividades"

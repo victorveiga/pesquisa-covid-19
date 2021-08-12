@@ -31,6 +31,12 @@
     z-index: -1;
 }
 
+
+.inputGroup label:hover {
+    background-color: #006B64;
+    color: white;
+}
+
 /* ==== CHECKED BUTTONS
 .inputGroup label:after {
     width: 32px;

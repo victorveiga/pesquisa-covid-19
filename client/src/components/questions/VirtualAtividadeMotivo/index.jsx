@@ -22,7 +22,7 @@ export default class VirtualAtividadeMotivo extends Component {
                 controlId="edtVirtualAtividadeMotivoEspec"
                 form={this.props.form}
                 label="Especificar motivos de não ter utilizado da virtualidade para substituir alguma atividade"
-                placeholder="Especifique o motivo"
+                placeholder="Escreva aqui"
                 field="virtual_at_motivo_espec"
                 required={this.props.form.state.virtual_atividade_motivo && this.props.form.state.virtual_atividade_motivo === "4" ? true : false}
                 feedback_invalid="Por favor, especifique o motivo"

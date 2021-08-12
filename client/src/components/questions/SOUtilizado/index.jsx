@@ -24,7 +24,7 @@ export default class SOUtilizado extends Component {
                 controlId="edtSOUtilizadoEspec"
                 form={this.props.form}
                 label="Especificar outro sistema operacional"
-                placeholder="Especifique aqui o sistema operacional que você utilizou"
+                placeholder="Escreva aqui"
                 field="so_utilizado_espec"
                 required={this.props.form.state.so_utilizado && this.props.form.state.so_utilizado === "7" ? true : false}
                 feedback_invalid="Por favor, especifique o sistema operacional"

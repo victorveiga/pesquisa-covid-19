@@ -22,7 +22,7 @@ export default class ObstaculoEquipamento extends Component {
                 controlId="edtObstaculoEquipEspec"
                 form={this.props.form}
                 label="Especificar outros obtáculos do motivo da falta de equipamentos"
-                placeholder="Especifique outros obtáculos do motivo da falta de equipamentos"
+                placeholder="Escreva aqui"
                 field="obstaculo_equip_espec"
                 required={this.props.form.state.obstaculo_equipamento && this.props.form.state.obstaculo_equipamento === "4" ? true : false}
                 feedback_invalid="Por favor, especifique os obtáculos"

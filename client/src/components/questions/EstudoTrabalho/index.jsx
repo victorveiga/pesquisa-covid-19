@@ -25,7 +25,7 @@ export default class EstudoTrabalho extends Component {
                     controlId="edtEstudoEspecificar"
                     form={this.props.form}
                     label="Especificar os estudos"
-                    placeholder="Especifique o seu nível de estudos"
+                    placeholder="Escreva aqui"
                     field="instrucao_outro"
                     required={this.props.form.state.instrucao && this.props.form.state.instrucao === "7" ? true : false}
                     feedback_invalid="Por favor, especifique o nível dos seus estudos"

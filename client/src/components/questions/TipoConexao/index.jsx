@@ -22,7 +22,7 @@ export default class TipoConexao extends Component {
                 controlId="edtTipoConexao"
                 form={this.props.form}
                 label="Especificar a conexão sua conexão com a internet"
-                placeholder="Especifique a conexão da sua conexão internet"
+                placeholder="Escreva aqui"
                 field="tipo_conexao_espec"
                 required={this.props.form.state.tipo_conexao && this.props.form.state.tipo_conexao === "5" ? true : false}
                 feedback_invalid="Por favor, especifique a conexão da sua conexão internet"

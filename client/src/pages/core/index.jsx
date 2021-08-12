@@ -15,6 +15,8 @@ export default class Core extends Component {
             question_idx: -1,
             aceitou_termo: false
         }
+
+        this.refForm = React.createRef();
     }
 
     nextQuestion(){
@@ -24,7 +26,7 @@ export default class Core extends Component {
         if (index > (QUESTIONS_LIST.length-1)) return ;
 
         this.setState({content:null});
-        this.setState({content:QUESTIONS_LIST[index], question_idx: index, validated: false});
+        this.setState({content:QUESTIONS_LIST[index], question_idx: index});
     }
 
     previousQuestion(){
@@ -37,8 +39,8 @@ export default class Core extends Component {
     }
 
     handleSubmit(e){
-        e.preventDefault();
-        const form = e.currentTarget;
+        e.preventDefault();               
+        const form = this.refForm.current; //const form = e.currentTarget;
         let result = false;
         if (form.checkValidity() === false) {
             e.stopPropagation();
@@ -47,14 +49,14 @@ export default class Core extends Component {
             result = true;
         }
 
-        this.setState({validated: true});
+        this.setState({validated: !result});
         return result;
     }
 
     render(){
         return <>
             <div className="d-flex justify-content-center p-4" >
-                <Form noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}>                   
+                <Form ref={this.refForm} noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}>                   
                     <div style={{maxWidth: '500px'}}>
                         {this.state.aceitou_termo === false && <Term form={this} />}
                         {this.state.aceitou_termo === true && 
@@ -64,7 +66,7 @@ export default class Core extends Component {
                             <Button variant="outline-success" type="submit">Continuar</Button>
                         </div>
                         
-                        <this.state.content form={this} />
+                        <this.state.content form={this} />         
                         </div>}
                     </div>
                 </Form>
