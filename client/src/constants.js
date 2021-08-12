@@ -16,8 +16,25 @@ import SOUtilizado from "./components/questions/SOUtilizado";
 import UtilizouVirtualidade from "./components/questions/UtilizouVirtualidade";
 import VirtualAtividade from "./components/questions/VirtualAtividade";
 import VirtualAtividadeMotivo from "./components/questions/VirtualAtividadeMotivo";
+import DificuldadeUsoApp from "./components/questions/DificuldadeUsoApp";
+import ContatarSuporteApp from "./components/questions/ContatarSuporteApp";
+import SatisfacaoTelefone from "./components/questions/SatisfacaoTelefone";
+import SatisfacaoInternet from "./components/questions/SatisfacaoInternet";
+import SatisfacaoTV from "./components/questions/SatisfacaoTV";
+import SatisfacaoLuz from "./components/questions/SatisfacaoLuz";
+import SatisfacaoStreaming from "./components/questions/SatisfacaoStreaming";
+import SatisfacaoFinanceiras from "./components/questions/SatisfacaoFinanceiras";
+import SatisfacaoGoverno from "./components/questions/SatisfacaoGoverno";
+import SatisfacaoUniversidade from "./components/questions/SatisfacaoUniversidade";
 
 const QUESTIONS_LIST = [
+    // Comuns
+    Local,
+    Pessoal,
+    Pessoal_2,
+    EstudoTrabalho,
+    Pessoal_3,  
+    // Tecnológicas
     TipoConexao,
     TipoRede,
     DispositivoUsado,
@@ -31,11 +48,16 @@ const QUESTIONS_LIST = [
     UtilizouVirtualidade,
     VirtualAtividade,
     VirtualAtividadeMotivo,
-    Local,
-    Pessoal,
-    Pessoal_2,
-    EstudoTrabalho,
-    Pessoal_3,    
+    DificuldadeUsoApp,
+    ContatarSuporteApp,
+    SatisfacaoTelefone,
+    SatisfacaoInternet,
+    SatisfacaoTV,
+    SatisfacaoLuz,
+    SatisfacaoStreaming,
+    SatisfacaoFinanceiras,
+    SatisfacaoGoverno,
+    SatisfacaoUniversidade,  
 ];
 
 const UNIDADES_FEDERATIVAS = [
