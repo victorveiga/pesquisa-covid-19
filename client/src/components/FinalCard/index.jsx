@@ -3,11 +3,6 @@ import {Button} from 'react-bootstrap';
 import './index.css';
 
 export default class FinalCard extends Component {
-
-    componentDidMount(){
-        console.log('dataset', JSON.stringify(this.props.form.state))
-    }
-
     render(){
         return <>
             <div className="card" style={{width: '300px'}}>
