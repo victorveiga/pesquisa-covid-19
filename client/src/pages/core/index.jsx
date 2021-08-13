@@ -17,6 +17,7 @@ export default class Core extends Component {
             question_idx: -1,
             aceitou_termo: false,
             finished: false,
+            readOnly: false
         }
 
         this.refForm = React.createRef();
@@ -42,7 +43,7 @@ export default class Core extends Component {
         if (index < 0) return ;
         
         this.setState({content:null});
-        this.setState({content:QUESTIONS_LIST[index], question_idx: index});
+        this.setState({content:QUESTIONS_LIST[index], question_idx: index, finished: false});
     }
 
     handleSubmit(e){
@@ -66,22 +67,21 @@ export default class Core extends Component {
                 <Form ref={this.refForm} noValidate validated={this.state.validated} onSubmit={e => this.handleSubmit(e)}>                   
                     <div style={{maxWidth: '500px'}}>
                         {this.state.aceitou_termo === false && <Term form={this} />}
-                        {this.state.aceitou_termo === true && this.state.finished === false &&
+                        {this.state.aceitou_termo === true &&
                         <div>
-                            <div className="d-flex justify-content-end mb-2">                                                            
+                            {this.state.finished === false && <div className="d-flex justify-content-end mb-2">                                                            
                                 <OverlayTrigger placement="bottom" overlay={ props => <Tooltip {...props}>Questão Anterior</Tooltip>}>                    
                                     <Button variant="outline-dark" className="mr-2 selection-button" onClick={e => this.previousQuestion()}><BiSkipPreviousCircle size="2em"/></Button>                                
                                 </OverlayTrigger>
                                 <OverlayTrigger placement="bottom" overlay={ props => <Tooltip {...props}>Próxima Questão</Tooltip>}>                    
                                     <Button variant="outline-dark" className="selection-button" type="submit"><BiSkipNextCircle size="2em"/></Button>
                                 </OverlayTrigger>
-                            </div>
-                            
-                            <div style={ this.state.finished === true ? {pointerEvents: 'none'}:{}}>
+                            </div>}
+                            {this.state.finished === false && <div style={ this.state.readOnly === true ? {pointerEvents: 'none'}:{}}>
                                 <this.state.content form={this} />
-                            </div>
+                            </div>}
+                            {this.state.aceitou_termo === true && this.state.finished === true && <FinalCard form={this}/>}
                         </div>}
-                        {this.state.aceitou_termo === true && this.state.finished === true && <FinalCard form={this}/>}
                     </div>
                 </Form>
             </div>         
