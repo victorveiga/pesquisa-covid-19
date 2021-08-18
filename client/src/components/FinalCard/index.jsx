@@ -1,8 +1,26 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
+import api from '../../services/api';
 import './index.css';
 
 export default class FinalCard extends Component {
+
+    componentDidMount(){
+        this.save()
+    }
+
+    save(){
+        if (this.props.form.state.readOnly === true) return null;
+        api.post('participante/', this.props.form.state)
+            .then(response => {
+                console.log('Pesquisa submetida com sucesso!', response);
+            })
+            .catch(error => {
+                console.log('Erro: ', error.message);
+                console.log('Erro Det.:', error.response.data);
+            });
+    }
+
     render(){
         return <>
             <div className="card" style={{width: '300px'}}>

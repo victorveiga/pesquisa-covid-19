@@ -13,7 +13,7 @@ class Dados(models.Model):
     genero = models.CharField(
         verbose_name="Com que gênero você se identifica?", 
         max_length=1, 
-        choices=[('M', 'Masculino'),('M', 'Feminino'),('M', 'Outro')]
+        choices=[('M', 'Masculino'),('F', 'Feminino'),('O', 'Outro')]
     )
     cor = models.CharField(
         verbose_name="Com que cor você se identifica?", 
