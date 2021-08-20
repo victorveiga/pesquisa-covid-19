@@ -2,18 +2,18 @@ import React, {Component} from 'react';
 import { Form } from 'react-bootstrap';
 import Checkbox from '../../Fields/Checkbox';
 
-export default class AppsUtilizados extends Component {
+export default class AppsUtilizados4 extends Component {
     render(){
         return <div>                
             <Checkbox
                 form={this.props.form}
                 label="Quais aplicativos ou software você utiliza? (Pode escolher mais de uma opção)"
                 options={[
-                    {value: "1" , description: "Facebook"},
-                    {value: "2" , description: "Linkedin"},
-                    {value: "3" , description: "Youtube"},
-                    {value: "4" , description: "Skype"},
-                    {value: "5" , description: "Snapchat"},                    
+                    {value: "16", description: "Hangout"},
+                    {value: "17", description: "Bible Youversion"},
+                    {value: "18", description: "ResearchGate"},
+                    {value: "19", description: "Flickr"},
+                    {value: "20", description: "Tiktok"},
                 ]}
                 field="apps_utilizados"
             />

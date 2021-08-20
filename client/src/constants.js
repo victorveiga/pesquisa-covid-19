@@ -12,6 +12,10 @@ import MotivoTrocaPerfilUsuario from "./components/questions/MotivoTrocaPerfilUs
 import EquipamentoHomeOffice from "./components/questions/EquipamentoHomeOffice";
 import ObstaculoEquipamento from "./components/questions/ObstaculoEquipamento";
 import AppsUtilizados from "./components/questions/AppsUtilizados";
+import AppsUtilizados2 from "./components/questions/AppsUtilizados2";
+import AppsUtilizados3 from "./components/questions/AppsUtilizados3";
+import AppsUtilizados4 from "./components/questions/AppsUtilizados4";
+import AppsUtilizados5 from "./components/questions/AppsUtilizados5";
 import SOUtilizado from "./components/questions/SOUtilizado";
 import UtilizouVirtualidade from "./components/questions/UtilizouVirtualidade";
 import VirtualAtividade from "./components/questions/VirtualAtividade";
@@ -44,6 +48,10 @@ const QUESTIONS_LIST = [
     EquipamentoHomeOffice,
     ObstaculoEquipamento,
     AppsUtilizados,
+    AppsUtilizados2,
+    AppsUtilizados3,
+    AppsUtilizados4,
+    AppsUtilizados5,
     SOUtilizado,
     UtilizouVirtualidade,
     VirtualAtividade,

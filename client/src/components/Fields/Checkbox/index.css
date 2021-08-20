@@ -1,10 +1,10 @@
-.inputGroup {
+.inputGroup2 {
     background-color: #fff;
     display: block;
     margin: 10px 0;
     position: relative;
 }
-.inputGroup label {
+.inputGroup2 label {
     padding: 12px 30px;
     width: 100%;
     display: block;
@@ -16,7 +16,7 @@
     transition: color 200ms ease-in;
     overflow: hidden;
 }
-.inputGroup label:before {
+.inputGroup2 label:before {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -31,22 +31,22 @@
     z-index: -1;
 }
 
-.inputGroup label:hover {    
+.inputGroup2 label:hover {    
     box-shadow: 10px 10px 10px 10px grey;
 }
 
-.inputGroup input:checked ~ label {
+.inputGroup2 input:checked ~ label {
     color: #fff;
 }
-.inputGroup input:checked ~ label:before {
+.inputGroup2 input:checked ~ label:before {
     transform: translate(-50%, -50%) scale3d(56, 56, 1);
     opacity: 1;
 }
-.inputGroup input:checked ~ label:after {
+.inputGroup2 input:checked ~ label:after {
     background-color: #28a745; /*#54e0c7;*/
     border-color: #28a745; /*#54e0c7;*/
 }
-.inputGroup input {
+.inputGroup2 input {
     width: 32px;
     height: 32px;
     order: 1;
