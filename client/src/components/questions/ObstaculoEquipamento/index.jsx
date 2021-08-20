@@ -17,6 +17,7 @@ export default class ObstaculoEquipamento extends Component {
                     {value: "4", description: "Outro"},
                 ]}
                 field="obstaculo_equipamento"
+                specific_field_value="4"
             />}
             {this.props.form.state.obstaculo_equipamento && this.props.form.state.obstaculo_equipamento === "4" && <CharField 
                 controlId="edtObstaculoEquipEspec"

@@ -16,6 +16,7 @@ export default class DispositivoUsado extends Component {
                     {value: "4", description: "Outro"},
                 ]}
                 field="dispositivo_usado"
+                specific_field_value="4"
             />
             {this.props.form.state.dispositivo_usado && this.props.form.state.dispositivo_usado === "4" && <CharField                 
                 form={this.props.form}

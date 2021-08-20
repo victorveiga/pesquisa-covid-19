@@ -17,6 +17,7 @@ export default class TipoConexao extends Component {
                     {value: "5", description: "Outro (Especificar)"}
                 ]}
                 field="tipo_conexao"
+                specific_field_value="5"
             />
             {this.props.form.state.tipo_conexao && this.props.form.state.tipo_conexao === "5" && <CharField 
                 controlId="edtTipoConexao"

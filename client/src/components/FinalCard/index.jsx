@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
 import api from '../../services/api';
+import trophy from '../../assets/trophy.png';
 import './index.css';
 
 export default class FinalCard extends Component {
@@ -16,15 +17,18 @@ export default class FinalCard extends Component {
                 console.log('Pesquisa submetida com sucesso!', response);
             })
             .catch(error => {
-                console.log('Erro: ', error.message);
-                console.log('Erro Det.:', error.response.data);
+                if (error.message)
+                    console.log('Erro: ', error.message);;
+
+                if (error.response && error.response.data)    
+                    console.log('Erro Det.:', error.response.data);
             });
     }
 
     render(){
         return <>
             <div className="card" style={{width: '300px'}}>
-                <div className="card-body text-center"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png" alt="Imagem obrigado"/>
+                <div className="card-body text-center"> <img src={trophy} alt="Imagem obrigado"/>
                     <h4>Obrigado!</h4>
                     <p>Agradecemos o seu empenho em nos ajudar! Fique tranquilo, as informações aqui prestadas são anônimas. Até a próxima!</p> 
                     <Button variant="outline-info" onClick={ e => {

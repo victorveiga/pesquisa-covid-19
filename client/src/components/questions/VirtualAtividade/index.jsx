@@ -19,6 +19,7 @@ export default class VirtualAtividade extends Component {
                     {value: "6", description: "Outra"},
                 ]}
                 field="virtual_atividade"
+                specific_field_value="6"
             />}
             {this.props.form.state.virtual_atividade && this.props.form.state.virtual_atividade === "6" && <CharField 
                 controlId="edtVirtualAtividadeEspec"

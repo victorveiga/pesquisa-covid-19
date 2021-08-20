@@ -12,8 +12,14 @@ export default class RadioButton extends BaseField {
                     type="radio"
                     value={item.value}
                     checked={item.value === this.getValue(this.props.field)}
-                    onChange={e => this.handleChange(e, this.props.field)}
-                    onClick={ e => this.props.form.handleSubmit(e) }
+                    onChange={e => {
+                        if (!(e.target.value === this.props.specific_field_value)){
+                            this.handleChange(e, this.props.field);
+                            this.props.form.handleSubmit(e);
+                        }
+
+                        this.handleChange(e, this.props.field);
+                    }}                    
                 />
                 <label htmlFor={`radio${index}`}>{item.description}</label>
             </div>)}

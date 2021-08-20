@@ -19,6 +19,7 @@ export default class SOUtilizado extends Component {
                     {value: "7", description: "Outro"},
                 ]}
                 field="so_utilizado"
+                specific_field_value="7"
             />
             {this.props.form.state.so_utilizado && this.props.form.state.so_utilizado === "7" && <CharField 
                 controlId="edtSOUtilizadoEspec"
