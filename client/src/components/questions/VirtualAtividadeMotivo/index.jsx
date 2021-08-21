@@ -1,13 +1,21 @@
 import React, {Component} from 'react';
 import { Form } from 'react-bootstrap';
-import RadioButton from '../../Fields/RadioButton';
+import Checkbox from '../../Fields/Checkbox';
 import { CharField } from '../../Fields';
 
 export default class VirtualAtividadeMotivo extends Component {
+
+    componentDidMount(){
+        if (this.props.form.state.utilizou_virtualidade && this.props.form.state.utilizou_virtualidade === "S"){
+            this.props.form.addExceptionIndice(this.props.form.state.question_idx);
+            this.props.form.nextQuestion();
+        }
+    }
+
     render(){
         return <div>      
             {this.props.form.state.utilizou_virtualidade && this.props.form.state.utilizou_virtualidade === "N" &&
-            <RadioButton
+            <Checkbox
                 form={this.props.form}
                 label="Caso tenha respondido NÃO, assinale o(s) motivo(s) que identificados por você (pode marcar mais de um)"
                 options={[                                         

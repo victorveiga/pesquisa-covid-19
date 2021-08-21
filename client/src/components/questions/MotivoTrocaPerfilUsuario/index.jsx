@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
 import { Form } from 'react-bootstrap';
-import RadioButton from '../../Fields/RadioButton';
+import Checkbox from '../../Fields/Checkbox';
 
 export default class MotivoTrocaPerfilUsuario extends Component {
+
+    componentDidMount(){
+        if (this.props.form.state.trocou_perfil_usuario && this.props.form.state.trocou_perfil_usuario !== "S"){
+            this.props.form.addExceptionIndice(this.props.form.state.question_idx);
+            this.props.form.nextQuestion();
+        }
+    }
+
     render(){
         return <div> 
             {this.props.form.state.trocou_perfil_usuario && this.props.form.state.trocou_perfil_usuario === "S" &&
-            <RadioButton
+            <Checkbox
                 form={this.props.form}
                 label="Caso tenha respondido “sim” na pergunta anterior, indique o motivo? (você pode responder mais de uma)"
                 options={[

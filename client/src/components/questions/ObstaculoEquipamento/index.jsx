@@ -4,6 +4,14 @@ import RadioButton from '../../Fields/RadioButton';
 import { CharField } from '../../Fields';
 
 export default class ObstaculoEquipamento extends Component {
+
+    componentDidMount(){
+        if (this.props.form.state.equipamento_home_office && this.props.form.state.equipamento_home_office === "S"){
+            this.props.form.addExceptionIndice(this.props.form.state.question_idx);
+            this.props.form.nextQuestion();
+        }
+    }
+
     render(){
         return <div>      
             {this.props.form.state.equipamento_home_office && this.props.form.state.equipamento_home_office === "N" &&

@@ -21,6 +21,7 @@ export default class Core extends Component {
         }
 
         this.refForm = React.createRef();
+        this.exception_indices = [];
     }
 
     nextQuestion(){
@@ -39,6 +40,8 @@ export default class Core extends Component {
     previousQuestion(){
         let index = this.state.question_idx;
         index--;
+
+        if (this.exception_indices.indexOf(index) >= 0) index--;
 
         if (index < 0) return ;
         
@@ -59,6 +62,11 @@ export default class Core extends Component {
 
         this.setState({validated: !result});
         return result;
+    }
+
+    addExceptionIndice(index){
+        if (this.exception_indices.indexOf(index) >= 0) return ;
+        this.exception_indices.push(index);
     }
 
     render(){

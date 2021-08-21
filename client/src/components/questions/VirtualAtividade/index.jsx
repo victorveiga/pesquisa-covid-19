@@ -4,6 +4,14 @@ import RadioButton from '../../Fields/RadioButton';
 import { CharField } from '../../Fields';
 
 export default class VirtualAtividade extends Component {
+
+    componentDidMount(){
+        if (this.props.form.state.utilizou_virtualidade && this.props.form.state.utilizou_virtualidade === "N"){
+            this.props.form.addExceptionIndice(this.props.form.state.question_idx);
+            this.props.form.nextQuestion();
+        }
+    }
+
     render(){
         return <div>      
             {this.props.form.state.utilizou_virtualidade && this.props.form.state.utilizou_virtualidade === "S" &&
