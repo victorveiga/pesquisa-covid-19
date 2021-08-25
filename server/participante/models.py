@@ -1,5 +1,6 @@
 from django.db import models
-from django.db.models.enums import Choices
+from multiselectfield import MultiSelectField
+from .constants import MOTIVO_TROCA_USUARIO, APPS_UTILIZADOS, VIRTUAL_ATIVIDADE, VIRTUAL_ATIVIDADE_MOTIVO
 
 # Create your models here.
 class Dados(models.Model):
@@ -131,6 +132,12 @@ class Dados(models.Model):
             ("N", "Não"),  
         ]
     )
+    motivo_troca_usuario = MultiSelectField(
+        verbose_name="Caso tenha respondido “sim” na pergunta anterior, indique o motivo? (você pode responder mais de uma):",
+        choices=MOTIVO_TROCA_USUARIO,
+        max_length=6,
+        max_choices=6
+    )
     equipamento_home_office = models.CharField(
         verbose_name="Você possui os equipamentos necessários para trabalhar em home office?",
         max_length=1,
@@ -151,36 +158,11 @@ class Dados(models.Model):
         blank=True
     )
     obstaculo_equipamento_espec = models.CharField(verbose_name="Especificar outros obtáculos do motivo da falta de equipamentos", max_length=255, null=True, blank=True)
-    apps_utilizados = models.IntegerField(
+    apps_utilizados = MultiSelectField(
         verbose_name="Quais aplicativos ou software você utiliza? (Pode escolher mais de uma opção)",
-        choices=[
-            ("1" , "Facebook"),
-            ("2" , "Linkedin"),
-            ("3" , "Youtube"),
-            ("4" , "Skype"),
-            ("5" , "Snapchat"),
-            ("6" , "Twitter"),
-            ("7" , "Vimeo"),
-            ("8" , "Whatsaap"),
-            ("9" , "Netflix"),
-            ("10", "Amazon Prime Video"),
-            ("11", "Disney+"),
-            ("12", "Globoplay"),
-            ("13", "Paramount+"),
-            ("14", "Telegram"),
-            ("15", "Instagram"),
-            ("16", "Hangout"),
-            ("17", "Bible Youversion"),
-            ("18", "ResearchGate"),
-            ("19", "Flickr"),
-            ("20", "Tiktok"),
-            ("21", "E-mail"),
-            ("22", "Kindle"),
-            ("23", "Waze"),
-            ("24", "Cifra Club"),
-            ("25", "Aplicativos para acessar instituições financeiras"),
-            ("26", "Aplicativos para o aprendizado de idiomas")
-        ]
+        choices=APPS_UTILIZADOS,
+        max_length=26,
+        max_choices=26
     )
     so_utilizado = models.IntegerField(
         verbose_name="Quais os sistemas operacionais que você mais utiliza?",
@@ -203,28 +185,20 @@ class Dados(models.Model):
             ("N", "Não")
         ]
     )
-    virtual_atividade = models.IntegerField(
+    virtual_atividade = MultiSelectField(
         verbose_name="Caso tenha respondido SIM, assinale a(s) atividade(s) desenvolvida(s) por você  (pode marcar mais de uma)",
-        choices=[
-            (1, "Estudar/realizar atividades referentes apenas ao curso de graduação."),
-            (2, "Estudar para qualificação profissional."),
-            (3, "Trabalhar na modalidade online (home office)."),
-            (4, "Fazer compras (supermercado/farmácia/padaria/vestuário)."),
-            (5, "Pagar contas online (água/luz/telefone/condomínio)."),
-            (6, "Outra")
-        ]
+        choices=VIRTUAL_ATIVIDADE,
+        max_length=6,
+        max_choices=6
     )
     virtual_atividade_espec = models.CharField(verbose_name="Especificar atividades desenvolvidas por você", max_length=255, null=True, blank=True)
-    virtual_atividade_motivo = models.IntegerField(
-        verbose_name="Caso tenha respondido NÃO, assinale o(s) motivo(s) que identificados por você   (pode marcar mais de um)",
-        choices=[
-            (1, "Trabalho em unidade de saúde."),
-            (2, "Não achei necessário substituir nenhuma atividade cotidiana."),
-            (3, "Minha atividade não pode ser exercida de modo online."),
-            (4, "Outro")           
-        ],
+    virtual_atividade_motivo = MultiSelectField(
+        verbose_name="Caso tenha respondido NÃO, assinale o(s) motivo(s) que identificados por você (pode marcar mais de um)",
+        choices=VIRTUAL_ATIVIDADE_MOTIVO,
         null=True,
-        blank=True
+        blank=True,
+        max_length=4,
+        max_choices=4
     )
     virtual_at_motivo_espec = models.CharField(verbose_name="Especificar motivos de não ter utilizado da virtualidade para substituir alguma atividade", max_length=255, null=True, blank=True)
     dificuldade_uso_app = models.CharField(

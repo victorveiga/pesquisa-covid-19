@@ -1,10 +1,17 @@
 from rest_framework.serializers import ModelSerializer, ValidationError
+from rest_framework import fields
 from .models import Dados
+from .constants import MOTIVO_TROCA_USUARIO, APPS_UTILIZADOS, VIRTUAL_ATIVIDADE, VIRTUAL_ATIVIDADE_MOTIVO
 
 class DadosSerializer(ModelSerializer):
     class Meta:
         model = Dados
         fields = '__all__'
+
+    motivo_troca_usuario     = fields.MultipleChoiceField(choices=MOTIVO_TROCA_USUARIO)
+    apps_utilizados          = fields.MultipleChoiceField(choices=APPS_UTILIZADOS)
+    virtual_atividade        = fields.MultipleChoiceField(choices=VIRTUAL_ATIVIDADE)
+    virtual_atividade_motivo = fields.MultipleChoiceField(choices=VIRTUAL_ATIVIDADE_MOTIVO)
 
     def validate(self, data):
         erros = {}
