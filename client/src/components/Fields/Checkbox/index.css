@@ -59,6 +59,8 @@
     visibility: hidden;
 }
 
+/* Ta dando xablau
 *, *::before, *::after {
     box-sizing: inherit;
 }
+*/
