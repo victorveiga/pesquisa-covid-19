@@ -136,7 +136,9 @@ class Dados(models.Model):
         verbose_name="Caso tenha respondido “sim” na pergunta anterior, indique o motivo? (você pode responder mais de uma):",
         choices=MOTIVO_TROCA_USUARIO,
         max_length=6,
-        max_choices=6
+        max_choices=6,
+        null=True,
+        blank=True
     )
     equipamento_home_office = models.CharField(
         verbose_name="Você possui os equipamentos necessários para trabalhar em home office?",

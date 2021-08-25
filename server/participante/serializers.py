@@ -51,6 +51,9 @@ class DadosSerializer(ModelSerializer):
 
         if data.get('virtual_atividade_motivo', 0) == 4 and (data.get('virtual_at_motivo_espec','') == ''):
             erros['virtual_at_motivo_espec'] = 'O campo virtual_at_motivo_espec é obrigatório quando o valor "4" é informado em virtual_atividade_motivo.'
+
+        if data.get('trocou_perfil_usuario', "") == "S" and (data.get('motivo_troca_usuario','') == ''):
+            erros['motivo_troca_usuario'] = 'O campo motivo_troca_usuario é obrigatório quando o valor "S" é informado em trocou_perfil_usuario.'        
         
         if (erros != {}):
             raise ValidationError(erros)
