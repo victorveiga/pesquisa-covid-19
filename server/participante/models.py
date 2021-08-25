@@ -15,6 +15,7 @@ class Dados(models.Model):
         max_length=1, 
         choices=[('M', 'Masculino'),('F', 'Feminino'),('O', 'Outro')]
     )
+    genero_outro = models.CharField(verbose_name="Especificar o gênero",max_length=255,null=True, blank=True)
     cor = models.CharField(
         verbose_name="Com que cor você se identifica?", 
         max_length=1, 
@@ -40,6 +41,7 @@ class Dados(models.Model):
             (6,"Não sabe"),
             (7,"Outro")
     ])
+    instrucao_outro = models.CharField(verbose_name="Especificar o nível máximo de estudos", max_length=255, null=True, blank=True)
     trabalho_estudo = models.IntegerField(
         verbose_name="Qual é  a sua situação de trabalho/estudo?",
         choices=[
@@ -51,6 +53,7 @@ class Dados(models.Model):
             (6,"Outro")
         ]
     )
+    trabalho_estudo_outro = models.CharField(verbose_name="Especificar a situação de trabalho/estudo", max_length=255, null=True, blank=True)
     funcao_unifeso = models.IntegerField(
         verbose_name="Assinale sua função principal na comunidade do UNIFESO (considere o maior número de horas na atividade desenvolvida):",
         choices=[
@@ -63,6 +66,7 @@ class Dados(models.Model):
             (7, "Outra.")
         ]
     )
+    funcao_unifeso_espec = models.CharField(verbose_name="Especificar a função", max_length=255, null=True, blank=True)
     moradia_caracteristicas = models.IntegerField(
         verbose_name="A casa/apartamento em que você está confinado tem alguma das seguintes características?",
         choices=[
@@ -92,6 +96,7 @@ class Dados(models.Model):
             (5, "Outro(Especificar)")
         ]
     )
+    tipo_conexao_espec = models.CharField(verbose_name="Especificar a conexão sua conexão com a internet", max_length=255, null=True, blank=True)
     tipo_rede = models.IntegerField(
         verbose_name="Tipo da rede que você costuma se conectar.",
         choices=[
@@ -109,6 +114,7 @@ class Dados(models.Model):
             (4, "Outro")
         ]
     )
+    dispositivo_usado_espec = models.CharField(verbose_name="Especificar o dispositivo utilizado para navegar na internet", max_length=255, null=True, blank=True)
     tipo_usuario = models.IntegerField(
         verbose_name="Qual o seu perfil de usuário da internet?",
         choices=[
@@ -133,6 +139,18 @@ class Dados(models.Model):
             ("N", "Não"),  
         ]
     )
+    obstaculo_equipamento = models.IntegerField(
+        verbose_name="Se não, quais são os obstáculos?",
+        choices=[
+            (1, "Falta de equipamentos (Computadores / notebooks)"),
+            (2, "Falta de uma conexão à internet estável"),
+            (3, "Falta de recursos financeiros"),
+            (4, "Outro")
+        ],
+        null=True,
+        blank=True
+    )
+    obstaculo_equipamento_espec = models.CharField(verbose_name="Especificar outros obtáculos do motivo da falta de equipamentos", max_length=255, null=True, blank=True)
     apps_utilizados = models.IntegerField(
         verbose_name="Quais aplicativos ou software você utiliza? (Pode escolher mais de uma opção)",
         choices=[
@@ -176,6 +194,7 @@ class Dados(models.Model):
             (7, "Outro")
         ]
     )
+    so_utilizado_espec = models.CharField(verbose_name="Especificar o sistema operacional", max_length=255, null=True, blank=True)
     utilizou_virtualidade = models.CharField(
         verbose_name="Durante a pandemia do novo coronavírus você utilizou a virtualidade para substituir alguma de suas atividades cotidianas?",
         max_length=1,
@@ -195,6 +214,19 @@ class Dados(models.Model):
             (6, "Outra")
         ]
     )
+    virtual_atividade_espec = models.CharField(verbose_name="Especificar atividades desenvolvidas por você", max_length=255, null=True, blank=True)
+    virtual_atividade_motivo = models.IntegerField(
+        verbose_name="Caso tenha respondido NÃO, assinale o(s) motivo(s) que identificados por você   (pode marcar mais de um)",
+        choices=[
+            (1, "Trabalho em unidade de saúde."),
+            (2, "Não achei necessário substituir nenhuma atividade cotidiana."),
+            (3, "Minha atividade não pode ser exercida de modo online."),
+            (4, "Outro")           
+        ],
+        null=True,
+        blank=True
+    )
+    virtual_at_motivo_espec = models.CharField(verbose_name="Especificar motivos de não ter utilizado da virtualidade para substituir alguma atividade", max_length=255, null=True, blank=True)
     dificuldade_uso_app = models.CharField(
         verbose_name= "Você teve dificuldades em utilizar aplicativos/software/sistemas durante o período de confinamento?",
         max_length=1,
