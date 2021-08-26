@@ -135,7 +135,7 @@ class Dados(models.Model):
     motivo_troca_usuario = MultiSelectField(
         verbose_name="Caso tenha respondido “sim” na pergunta anterior, indique o motivo? (você pode responder mais de uma):",
         choices=MOTIVO_TROCA_USUARIO,
-        max_length=6,
+        max_length=255,
         max_choices=6,
         null=True,
         blank=True
@@ -163,7 +163,7 @@ class Dados(models.Model):
     apps_utilizados = MultiSelectField(
         verbose_name="Quais aplicativos ou software você utiliza? (Pode escolher mais de uma opção)",
         choices=APPS_UTILIZADOS,
-        max_length=26,
+        max_length=255,
         max_choices=26
     )
     so_utilizado = models.IntegerField(
@@ -190,7 +190,7 @@ class Dados(models.Model):
     virtual_atividade = MultiSelectField(
         verbose_name="Caso tenha respondido SIM, assinale a(s) atividade(s) desenvolvida(s) por você  (pode marcar mais de uma)",
         choices=VIRTUAL_ATIVIDADE,
-        max_length=6,
+        max_length=255,
         max_choices=6,
         null=True,
         blank=True,
@@ -201,7 +201,7 @@ class Dados(models.Model):
         choices=VIRTUAL_ATIVIDADE_MOTIVO,
         null=True,
         blank=True,
-        max_length=4,
+        max_length=255,
         max_choices=4
     )
     virtual_at_motivo_espec = models.CharField(verbose_name="Especificar motivos de não ter utilizado da virtualidade para substituir alguma atividade", max_length=255, null=True, blank=True)
