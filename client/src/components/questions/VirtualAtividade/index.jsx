@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Form } from 'react-bootstrap';
-import RadioButton from '../../Fields/RadioButton';
-import { CharField } from '../../Fields';
+import { CharField, Checkbox } from '../../Fields';
 
 export default class VirtualAtividade extends Component {
 
@@ -15,7 +14,7 @@ export default class VirtualAtividade extends Component {
     render(){
         return <div>      
             {this.props.form.state.utilizou_virtualidade && this.props.form.state.utilizou_virtualidade === "S" &&
-            <RadioButton
+            <Checkbox
                 form={this.props.form}
                 label="Caso tenha respondido SIM, assinale a(s) atividade(s) desenvolvida(s) por você  (pode marcar mais de uma)"
                 options={[                    

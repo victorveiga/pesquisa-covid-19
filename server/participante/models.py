@@ -191,7 +191,9 @@ class Dados(models.Model):
         verbose_name="Caso tenha respondido SIM, assinale a(s) atividade(s) desenvolvida(s) por você  (pode marcar mais de uma)",
         choices=VIRTUAL_ATIVIDADE,
         max_length=6,
-        max_choices=6
+        max_choices=6,
+        null=True,
+        blank=True,
     )
     virtual_atividade_espec = models.CharField(verbose_name="Especificar atividades desenvolvidas por você", max_length=255, null=True, blank=True)
     virtual_atividade_motivo = MultiSelectField(

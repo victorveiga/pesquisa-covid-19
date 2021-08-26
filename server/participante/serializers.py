@@ -8,10 +8,10 @@ class DadosSerializer(ModelSerializer):
         model = Dados
         fields = '__all__'
 
-    motivo_troca_usuario     = fields.MultipleChoiceField(choices=MOTIVO_TROCA_USUARIO)
+    motivo_troca_usuario     = fields.MultipleChoiceField(choices=MOTIVO_TROCA_USUARIO, allow_blank=True, allow_null=True)
     apps_utilizados          = fields.MultipleChoiceField(choices=APPS_UTILIZADOS)
-    virtual_atividade        = fields.MultipleChoiceField(choices=VIRTUAL_ATIVIDADE)
-    virtual_atividade_motivo = fields.MultipleChoiceField(choices=VIRTUAL_ATIVIDADE_MOTIVO)
+    virtual_atividade        = fields.MultipleChoiceField(choices=VIRTUAL_ATIVIDADE, allow_blank=True, allow_null=True)
+    virtual_atividade_motivo = fields.MultipleChoiceField(choices=VIRTUAL_ATIVIDADE_MOTIVO, allow_blank=True, allow_null=True)
 
     def validate(self, data):
         erros = {}

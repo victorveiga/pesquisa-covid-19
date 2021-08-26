@@ -17,7 +17,12 @@ export default class Core extends Component {
             question_idx: -1,
             aceitou_termo: false,
             finished: false,
-            readOnly: false
+            readOnly: false,
+
+            // REQUIRED INITIAL VALUES FIELDS
+            motivo_troca_usuario: null,
+            virtual_atividade: null,
+            virtual_atividade_motivo: null
         }
 
         this.refForm = React.createRef();
