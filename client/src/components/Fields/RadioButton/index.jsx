@@ -19,7 +19,9 @@ export default class RadioButton extends BaseField {
                         }
 
                         this.handleChange(e, this.props.field);
-                    }}                    
+                    }}  
+                    className="form-control" 
+                    required                 
                 />
                 <label htmlFor={`radio${index}`}>{item.description}</label>
             </div>)}

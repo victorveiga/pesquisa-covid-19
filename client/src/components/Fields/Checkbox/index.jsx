@@ -33,6 +33,8 @@ export default class Checkbox extends BaseField {
                     value={item.value}
                     checked={this.getValue(this.props.field) && this.getValue(this.props.field).indexOf(item.value) >= 0 ? true : false}
                     onChange={e => this.handleChange(e, this.props.field)}
+                    className="form-control"
+                    required={this.getValue(this.props.field) && this.getValue(this.props.field).length > 0 ? false : true}
                 />
                 <label htmlFor={`radio${index}`}>{item.description}</label>
             </div>)}
