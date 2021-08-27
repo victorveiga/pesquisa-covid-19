@@ -29,6 +29,11 @@ export default class Core extends Component {
         this.exception_indices = [];
     }
 
+    setReviewMode(){
+        this.setState({content:null});
+        this.setState({content:QUESTIONS_LIST[0], question_idx: 0, readOnly: true, finished: false});
+    }
+
     nextQuestion(){
         let index = this.state.question_idx;
         index++;
