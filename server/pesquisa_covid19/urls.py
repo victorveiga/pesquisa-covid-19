@@ -22,6 +22,6 @@ router = routers.DefaultRouter()
 router.register( r'participante' , ParticipanteViewSet , basename='Participante' )
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
+    path('api/admin/', admin.site.urls),
 ]
