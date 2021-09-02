@@ -35,7 +35,8 @@ ALLOWED_HOSTS = [
     'veigapps.com', 
     '162.240.5.149', 
     '162.240.9.26', 
-    'unifeso.edu.br'
+    'unifeso.edu.br',
+    'pesquisacovid19.unifeso.edu.br'
 ]
 
 ALLOWED_PORTS = [
