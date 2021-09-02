@@ -151,7 +151,7 @@ LOGIN_REDIRECT_URL = 'person_list'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    'static',
+    'statics',
 ]
 
-STATIC_URL = '/static/'
+STATIC_URL = '/statics/'
