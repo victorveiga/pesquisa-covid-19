@@ -26,7 +26,5 @@ router.register( r'participante' , ParticipanteViewSet , basename='Participante'
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('api/admin/', admin.site.urls),
-    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    re_path(r'^statics/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('api/pesquisador/', admin.site.urls)
+]

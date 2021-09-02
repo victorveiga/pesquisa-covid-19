@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Área do Pesquisador{% endblock %}
+
+{% block branding %}
+    <div id="site-name_">
+        <a href="{% url 'admin:index' %}"> 
+            <img src="{% static 'img/logo.png' %}" alt="Logo" width="150px">
+        </a>
+    </div>
+{% endblock %}
+
+{% block extrahead %}
+    <link rel="icon" href="{% static 'img/favicon.png' %}" sizes="48x48" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/geral.css" %}">
+{% endblock %}
+
+{% block userlinks %}
+    {% if user.has_usable_password %}
+    <a href="{% url 'admin:password_change' %}">ALTERAR SENHA</a> /
+    {% endif %}
+    <a href="{% url 'admin:logout' %}">ENCERRAR SESSÃO</a>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

@@ -1,0 +1,25 @@
+body::after {
+    content: "";
+    background-image: url('./assets/splash-login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+#header {
+    background: #006B64;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background-color: #006B64;
+}
+
+div.breadcrumbs {
+    background-color: #006B64;
+}
