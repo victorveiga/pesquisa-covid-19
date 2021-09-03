@@ -15,7 +15,7 @@ APPS_UTILIZADOS = [
     (5 , "Snapchat"),
     (6 , "Twitter"),
     (7 , "Vimeo"),
-    (8 , "Whatsaap"),
+    (8 , "Whatsapp"),
     (9 , "Netflix"),
     (10, "Amazon Prime Video"),
     (11, "Disney+"),

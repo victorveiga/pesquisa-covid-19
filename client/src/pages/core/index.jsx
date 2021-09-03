@@ -4,6 +4,7 @@ import {QUESTIONS_LIST} from '../../constants';
 import Term from '../../components/term';
 import FinalCard from '../../components/FinalCard';
 import {BiSkipNextCircle, BiSkipPreviousCircle} from 'react-icons/bi';
+import RadialProgressBar from '../../components/RadialProgressBar';
 import './index.css';
 
 export default class Core extends Component {
@@ -105,6 +106,7 @@ export default class Core extends Component {
                     
                 </div>         
             </Form>
+            <RadialProgressBar />
         </>
     }
 }

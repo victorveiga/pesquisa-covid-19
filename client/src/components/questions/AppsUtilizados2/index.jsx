@@ -11,7 +11,7 @@ export default class AppsUtilizados2 extends Component {
                 options={[
                     {value: "6" , description: "Twitter"},
                     {value: "7" , description: "Vimeo"},
-                    {value: "8" , description: "Whatsaap"},
+                    {value: "8" , description: "Whatsapp"},
                     {value: "9" , description: "Netflix"},
                     {value: "10", description: "Amazon Prime Video"},
                 ]}
