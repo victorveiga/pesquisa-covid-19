@@ -106,7 +106,7 @@ export default class Core extends Component {
                     
                 </div>         
             </Form>
-            <RadialProgressBar />
+            {this.state.aceitou_termo === true && this.state.finished === false && this.state.readOnly === false && <RadialProgressBar question_idx={this.state.question_idx} />}
         </>
     }
 }

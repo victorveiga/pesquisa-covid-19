@@ -12,7 +12,6 @@ export default class CharField extends BaseField {
                     value={this.getValue(this.props.field)}
                     onChange={e => this.handleChange(e, this.props.field)}
                     required
-                    {...this.props}
                 />
                 {this.props.feedback_invalid && <Form.Control.Feedback type="invalid">
                     {this.props.feedback_invalid}

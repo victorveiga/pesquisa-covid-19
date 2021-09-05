@@ -62,16 +62,6 @@
 	 border: 0.1em solid #bdc3c7;
 	 border-radius: 50%;
 }
-.pie-wrapper.progress-45 .pie .half-circle {
-    border-color: #006B64
-}
-.pie-wrapper.progress-45 .pie .left-side {
-    transform: rotate(162deg);
-}
-.pie-wrapper.progress-45 .pie .right-side {
-    display: none;    
-}
-
 .pie-wrapper.style-2 .label {
 	 background: none;
 	 color: #7f8c8d;
@@ -79,10 +69,6 @@
 .pie-wrapper.style-2 .label .smaller {
 	 color: #bdc3c7;
 }
-
-.pie-wrapper.progress-45 .pie .left-side {
-    transform: rotate(180deg);
-}
-.pie-wrapper.progress-30 .pie .right-side {
-    display: none;
+.pie-wrapper .pie .half-circle {
+	border-color: #006B64;
 }

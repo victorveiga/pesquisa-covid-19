@@ -43,13 +43,13 @@ class DadosSerializer(ModelSerializer):
         if data.get('so_utilizado', 0) == 7 and (data.get('so_utilizado_espec','') == ''):
             erros['so_utilizado_espec'] = 'O campo so_utilizado_espec é obrigatório quando o valor "7" é informado em so_utilizado.'
 
-        if data.get('virtual_atividade', 0) == 6 and (data.get('virtual_atividade_espec','') == ''):
+        if (not data.get('virtual_atividade', []) is None) and (6 in data.get('virtual_atividade', [])) and (data.get('virtual_atividade_espec','') == ''):
             erros['virtual_atividade_espec'] = 'O campo virtual_atividade_espec é obrigatório quando o valor "6" é informado em virtual_atividade.'
 
         if data.get('utilizou_virtualidade', "") == "N" and (data.get('virtual_atividade_motivo','') == ''):
             erros['virtual_atividade_motivo'] = 'O campo virtual_atividade_motivo é obrigatório quando o valor "N" é informado em utilizou_virtualidade.'
 
-        if data.get('virtual_atividade_motivo', 0) == 4 and (data.get('virtual_at_motivo_espec','') == ''):
+        if (not data.get('virtual_atividade_motivo', []) is None) and (4 in data.get('virtual_atividade_motivo', [])) and (data.get('virtual_at_motivo_espec','') == ''):
             erros['virtual_at_motivo_espec'] = 'O campo virtual_at_motivo_espec é obrigatório quando o valor "4" é informado em virtual_atividade_motivo.'
 
         if data.get('trocou_perfil_usuario', "") == "S" and (data.get('motivo_troca_usuario','') == ''):

@@ -28,13 +28,12 @@ export default class VirtualAtividade extends Component {
                 field="virtual_atividade"
                 specific_field_value="6"
             />}
-            {this.props.form.state.virtual_atividade && this.props.form.state.virtual_atividade === "6" && <CharField 
+            {this.props.form.state.virtual_atividade && this.props.form.state.virtual_atividade.indexOf("6") >= 0 && <CharField 
                 controlId="edtVirtualAtividadeEspec"
                 form={this.props.form}
                 label="Especificar atividades desenvolvidas por você"
                 placeholder="Escreva aqui"
                 field="virtual_atividade_espec"
-                required={this.props.form.state.virtual_atividade && this.props.form.state.virtual_atividade === "6" ? true : false}
                 feedback_invalid="Por favor, especifique as atividades"
             />}
             <Form.Text className="text-muted">
