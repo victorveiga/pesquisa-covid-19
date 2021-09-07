@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Form } from 'react-bootstrap';
-import Checkbox from '../../Fields/Checkbox';
-import { CharField } from '../../Fields';
+import { Checkbox, CharField } from '../../Fields';
 
 export default class VirtualAtividadeMotivo extends Component {
 

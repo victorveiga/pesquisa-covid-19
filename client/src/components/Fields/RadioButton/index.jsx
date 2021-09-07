@@ -19,6 +19,7 @@ export default class RadioButton extends BaseField {
                         }
 
                         this.handleChange(e, this.props.field);
+                        if (this.props.onChangeCustom)  this.props.onChangeCustom();
                     }}  
                     className="form-control" 
                     required                 

@@ -71,7 +71,7 @@ export default class Term extends Component {
                         além das perguntas que você responder.
                         <br/>
                         A pesquisa está em conformidade com a Lei Geral de Proteção de dados do Brasil - LGPD 
-                        (lei nº 13.709 de 14 de agosto de 2018) e possui aprovação do Conselho de Ética-Unifeso (Documento no XXXX).
+                        (lei nº 13.709 de 14 de agosto de 2018) e possui aprovação do Conselho de Ética-Unifeso (Documento nº 4.274.898).
                     </div>
                     <br/>
                     <div align="justify">
@@ -88,7 +88,7 @@ export default class Term extends Component {
                                 <strong>Nome do pesquisador(a):</strong><br/>
                             </div>
                             <div className="col-6">
-                                Cátia Araujo Farias <br/>
+                                Luciana Nunes <br/>
                             </div>
                         </div>
                         <div className="row border">
@@ -96,7 +96,7 @@ export default class Term extends Component {
                                 <strong>Cargo/Função:</strong><br/> 
                             </div>
                             <div className="col-6">
-                                Assessora Pedagógica da DEaD <br/> 
+                                XXXXXXX <br/> 
                             </div>
                         </div>
                         <div className="row border">
@@ -112,7 +112,7 @@ export default class Term extends Component {
                                 <strong>e-mail:</strong><br/> 
                             </div>
                             <div className="col-6">
-                                catiafarias@unifeso.edu.br <br/> 
+                                luciananunes@unifeso.edu.br <br/> 
                             </div>
                         </div>
                         <div className="row border">
@@ -120,7 +120,7 @@ export default class Term extends Component {
                                 <strong>Telefone:</strong><br/> 
                             </div>
                             <div className="col-6">
-                                (21) 97918-5857 <br/> 
+                                (21) 98189-3827 <br/> 
                             </div>
                         </div>
                     </div>
