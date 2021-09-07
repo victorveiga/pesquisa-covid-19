@@ -102,3 +102,11 @@
 .button, input[type=submit]:hover {
     background: #006B64;
 }
+
+.button, input[type=submit]:active {
+    background: #006B64;
+}
+
+.button, input[type=submit]:focus {
+    background: #006B64;
+}

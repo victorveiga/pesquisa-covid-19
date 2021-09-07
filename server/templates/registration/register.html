@@ -1,0 +1,14 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% load bootstrap %}
+
+{% block content %}
+<div>
+    <h2>Registrar</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <button type="submit" class="btn btn-info">Começar agora</button>
+    </form>
+</div>
+{% endblock %}

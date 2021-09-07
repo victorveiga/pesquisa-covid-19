@@ -20,11 +20,13 @@ from participante.viewsets import ParticipanteViewSet
 from django.views.static import serve 
 from django.conf.urls.static import static
 from django.conf import settings
+from participante.views import sigin
 
 router = routers.DefaultRouter()
 router.register( r'participante' , ParticipanteViewSet , basename='Participante' )
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('api/pesquisador/', admin.site.urls)
+    path('api/pesquisador/', admin.site.urls, name='pesquisador'),
+    path('api/registrar/', sigin, name='registrar')
 ]
