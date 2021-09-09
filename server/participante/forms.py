@@ -33,10 +33,7 @@ class UserForm(ModelForm):
 
         if commit:
             user.save()
-            try:
-                pesrmission = Permission.objects.get(codename='view_dados')
-                user.user_permissions.set([pesrmission.id])
-            except ValueError:
-                print('DEBUG', ValueError)
+            pesrmission = Permission.objects.get(codename='view_dados')
+            user.user_permissions.set([pesrmission.id])
 
         return user
