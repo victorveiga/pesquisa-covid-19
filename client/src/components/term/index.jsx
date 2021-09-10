@@ -88,7 +88,7 @@ export default class Term extends Component {
                                 <strong>Nome do pesquisador(a):</strong><br/>
                             </div>
                             <div className="col-6">
-                                Luciana Nunes <br/>
+                                Luciana Nunes Ferreira <br/>
                             </div>
                         </div>
                         <div className="row border">
@@ -96,7 +96,7 @@ export default class Term extends Component {
                                 <strong>Cargo/Função:</strong><br/> 
                             </div>
                             <div className="col-6">
-                                XXXXXXX <br/> 
+                                Professor auxiliar e assessora pedagógica, DEaD-Unifeso <br/> 
                             </div>
                         </div>
                         <div className="row border">
