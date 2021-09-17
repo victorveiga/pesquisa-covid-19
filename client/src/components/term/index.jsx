@@ -96,7 +96,7 @@ export default class Term extends Component {
                                 <strong>Cargo/Função:</strong><br/> 
                             </div>
                             <div className="col-6">
-                                Professor auxiliar e assessora pedagógica, DEaD-Unifeso <br/> 
+                                Professor Auxiliar e Assessora Pedagógica, DEaD-Unifeso <br/> 
                             </div>
                         </div>
                         <div className="row border">
