@@ -135,20 +135,22 @@ export default class Core extends Component {
                                 </OverlayTrigger>
                             </div>
                         )}
-                    <div className="d-flex justify-content-end p-4">
-                        <div style={{ textAlign: "end" }}>
-                            <div>
-                                Olá pesquisador!{" "}
-                                <a href="http://pesquisacovid19.unifeso.edu.br/api/pesquisador">
-                                    Entre aqui
-                                </a>{" "}
-                            </div>
-                            <div>
-                                <a href={dicionario}>Baixe</a> o dicionário de
-                                dados
+                    {this.state.aceitou_termo !== true && (
+                        <div className="d-flex justify-content-end p-4">
+                            <div style={{ textAlign: "end" }}>
+                                <div>
+                                    Olá pesquisador!{" "}
+                                    <a href="http://pesquisacovid19.unifeso.edu.br/api/pesquisador">
+                                        Entre aqui
+                                    </a>{" "}
+                                </div>
+                                <div>
+                                    <a href={dicionario}>Baixe</a> o dicionário
+                                    de dados
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
                     <div className="d-flex justify-content-center p-4">
                         <div style={{ maxWidth: "500px" }}>
                             {this.state.aceitou_termo === false && (
